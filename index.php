@@ -3,13 +3,13 @@ echo '<html lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="Create your Tibia Client Executable">
+		<meta name="description" content="Create your own Tibia Client Executable">
 
 		<title>MyTibiaClient</title>
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-		<link rel="icon" href="/icon.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css">
+		<link rel="icon" href="./icon.png">
 
-		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
 		<style>.container { max-width: 960px; } .border-top { border-top: 1px solid #e5e5e5; } .border-bottom { border-bottom: 1px solid #e5e5e5; } .border-top-gray { border-top-color: #adb5bd; } .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); } .lh-condensed { line-height: 1.25; } .center { display: block; margin-left: auto; margin-right: auto; }
 		</style>
@@ -17,7 +17,7 @@ echo '<html lang="en">
 	<body class="bg-light">
 		<div class="container">
 			<div class="py-5 text-center">
-				<img class="d-block mx-auto mb-4" src="/logo.png" alt="">
+				<img class="d-block mx-auto mb-4" src="./logo.png" alt="">
 			</div>
 			<div class="row">
 				<div class="col-md-4 order-md-2 mb-4">
@@ -27,7 +27,7 @@ echo '<html lang="en">
 					<ul class="list-group mb-3">
 						<li class="list-group-item d-flex justify-content-between lh-condensed">
 							<div>
-								<h6 class="my-0">MyTibiaClient is <a href="https://github.com/SaiyansKing/TibiaClientGenerator">open-source</a> custom Tibia Client generator website made in spare time by Mad Mage. If you like what I\'m doing you can donate me.</h6>
+								<h6 class="my-0">MyTibiaClient is an <a href="https://github.com/SaiyansKing/TibiaClientGenerator">open-source</a> custom Tibia Client generator website made in spare time by Mad Mage. If you like what I\'m doing you can donate to me.</h6>
 							</div>
 						</li>
 					</ul>
@@ -39,14 +39,15 @@ echo '<html lang="en">
 							<option>USD</option>
 							<option>EUR</option>
 							<option>PLN</option>
+							<option>BRL</option>
 						</select>
 						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" class="center"/>
 						<img alt="" border="0" src="https://www.paypal.com/en_BG/i/scr/pixel.gif" width="1" height="1" class="center"/>
 					</form>
 				</div>
 				<div class="col-md-8 order-md-1">
-					<p class="alert alert-primary">All empty fields will be ignored and the default client value will be used instead</p>
-					<form action="/generate.php" method="post" enctype="multipart/form-data">
+					<p class="alert alert-primary">All empty fields will be ignored and the default client value will be used instead.</p>
+					<form action="./generate.php" method="post" enctype="multipart/form-data">
 						<div class="row">
 							<div class="col-md-12 mb-3">
 								<label for="client version">Client Version</label>
@@ -87,7 +88,7 @@ echo '<html lang="en">
 							<input type="text" class="form-control" maxlength="310" name="rsa" id="rsa" placeholder="Custom RSA key">
 						</div>
 						<p class="alert alert-warning">
-							<i class="fas fa-exclamation-circle"></i>You can genera your own <a href="/generatersa.php">RSA Key</a>
+							<i class="fas fa-exclamation-circle"></i> You can generate your own <a href="./generatersa.php">RSA Key</a>
 						</p>
 						<div class="row">
 							<div class="col-md-6 mb-3">
@@ -120,7 +121,7 @@ echo '<html lang="en">
 								<label for="clientsitebutton">Client site button</label>
 								<input type="text" class="form-control" maxlength="13" name="site-button" placeholder="Client site button">
 							</div>
-							<div class="col-md-4 mb-3">  
+							<div class="col-md-4 mb-3">
 								<label for="defchannel">Default channel</label>
 								<input type="text" class="form-control" maxlength="7" name="default-channel" placeholder="Default channel name">
 							</div>
@@ -138,7 +139,7 @@ echo '<html lang="en">
 							<input type="text" class="form-control" maxlength="100" name="injectdll" placeholder="Inject DLL name">
 						</div>
 						<p class="alert alert-warning">
-							<i class="fas fa-exclamation-circle"></i>9.80+ not work for now.</a>
+							<i class="fas fa-exclamation-circle"></i> Client 9.80 and above not supported yet.</a>
 						</p>
 						<hr class="mb-4">
 						<div class="custom-control custom-checkbox">
@@ -157,7 +158,7 @@ echo '<html lang="en">
 						<div class="mb-3">
 							<label for="injectdlltext">Extends:</label>
 							<p class="alert alert-warning">
-								<i class="fas fa-exclamation-circle"></i>Most of these require server-side protocol update.<br>Currently only 8.54 and 8.60 works.</a>
+								<i class="fas fa-exclamation-circle"></i> Most of these require server-side protocol update.<br>Currently only 8.54 and 8.60 works.</a>
 							</p>
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input" name="ext-files" id="ext-files">
@@ -187,7 +188,7 @@ echo '<html lang="en">
 			</div>
 		</div>
 		<footer class="my-5 pt-5 text-muted text-center text-small">
-			<p class="mb-1">(Copyright) 2019-2019 MyTibiaClient by Mad Mage</p>
+			<p class="mb-1">(Copyright) 2019-2021 MyTibiaClient by Mad Mage</p>
 		</footer>
 	</body>
 </html>';
